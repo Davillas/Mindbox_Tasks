@@ -9,6 +9,11 @@ def test_right_triangle():
     t = Triangle(3, 4, 5)
     assert t.is_right() is True
 
+def test_not_right_triangle():
+    t = Triangle(3, 4, 4)
+    assert t.is_right() is False
+
+
 def test_invalid_triangle():
     with pytest.raises(ValueError):
         Triangle(1, 2, 3)

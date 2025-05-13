@@ -9,3 +9,7 @@ def test_circle_area():
 def test_circle_invalid_radius():
     with pytest.raises(ValueError):
         Circle(0)
+
+def test_circle_negative_radius():
+    with pytest.raises(ValueError):
+        Circle(-1)
